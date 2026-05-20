@@ -359,21 +359,28 @@ p {
 }
 
 .lake-frame img:first-child {
-  opacity: clamp(0, calc(1 - var(--story, 0) * 2.6), 1);
+  opacity: clamp(0, calc((0.44 - var(--story, 0)) * 12), 1);
 }
 
 .lake-frame img:nth-child(2) {
-  opacity: clamp(0, min(calc((var(--story, 0) - 0.16) * 3.4), calc((0.54 - var(--story, 0)) * 4.8)), 1);
+  opacity: clamp(
+    0,
+    min(
+      calc((var(--story, 0) - 0.42) * 14),
+      calc((0.64 - var(--story, 0)) * 14)
+    ),
+    1
+  );
 }
 
 .lake-frame img:nth-child(3) {
-  opacity: clamp(0, calc((var(--story, 0) - 0.42) * 4.8), 1);
+  opacity: clamp(0, calc((var(--story, 0) - 0.66) * 8), 1);
 }
 
 .star-reveal-layer {
   position: absolute;
   inset: 0;
-  opacity: clamp(0, calc((var(--story, 0) - 0.66) * 2.4), 0.38);
+  opacity: clamp(0, calc((var(--story, 0) - 0.8) * 2.2), 0.24);
   background:
     radial-gradient(circle at 50% 18%, rgba(255, 255, 255, 0.1), transparent 30%),
     linear-gradient(180deg, rgba(3,5,13,0.04), rgba(3,5,13,0.55));
@@ -656,6 +663,18 @@ p {
   background: #05080d;
   font-size: 0.86rem;
   font-weight: 700;
+}
+
+.site-footer span:first-child {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.site-footer .brand-mark {
+  width: 16px;
+  height: 16px;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.45);
 }
 
 [data-reveal] {
